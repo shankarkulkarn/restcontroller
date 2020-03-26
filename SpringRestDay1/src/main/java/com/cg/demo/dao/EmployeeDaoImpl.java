@@ -28,4 +28,20 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		return list;
 	}
 
+	public Employee   findEmployeeById(int employeeId)
+	{
+		return map.get(employeeId);
+	}
+	
+	public  Employee deleteEmployeeById(int employeeId)
+	{
+		return  map.remove(employeeId);
+	}
+	
+	public Employee  addEmployee(Employee employee)
+	{
+		map.put(employee.getEmployeeId(), employee);
+		
+		return employee ;
+	}
 }

@@ -14,10 +14,23 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Autowired
 	EmployeeDao  employeeDao;
 	
+	public Employee   findEmployeeById(int employeeId)
+	{
+		return employeeDao.findEmployeeById(employeeId);
+	}
 	@Override
 	public List<Employee> findall() {
 		// TODO Auto-generated method stub
 		return employeeDao.findall();
+	}
+	@Override
+	public Employee deleteEmployeeById(int employeeId) {
+		// TODO Auto-generated method stub
+		return employeeDao.deleteEmployeeById(employeeId);
+	}
+	public Employee  addEmployee(Employee employee)
+	{
+		return employeeDao.addEmployee(employee);
 	}
 
 }
